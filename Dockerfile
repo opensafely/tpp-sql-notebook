@@ -9,6 +9,12 @@ COPY requirements.txt /tmp/
 RUN chmod 644 /tmp/requirements.txt
 RUN pip install --requirement /tmp/requirements.txt
 
+# Install MS stuff
+COPY install_mssql.sh /tmp/
+RUN bash /tmp/install_mssql.sh
+RUN pip install pyodbc
+
+
 EXPOSE 8888
 
 # This is a custom ipython kernel that allows us to manipulate
