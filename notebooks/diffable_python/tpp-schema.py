@@ -16,20 +16,21 @@
 
 import pyodbc
 import pandas as pd
-
-# +
-# enter ip address and port number of the system where the database resides.
-#sqlcmd -S covid.ebmdatalab.net,1433 -U SA -P "$SQLPW" -q "EXIT(SELECT TOP 10 StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems ORDER BY StockItemID)"
+from IPython.display import display, Markdown
 
 server = 'covid.ebmdatalab.net,1433'
-database = 'WideWorldImporters' # enter database name
+database = 'OPENCoronaExport' 
 username = 'SA'
-password = 'ahsjdkaJAMSHDA123[' # add appropriate driver name
+password = 'ahsjdkaJAMSHDA123[' 
 cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
-# -
 
 # select command
-query = ''' SELECT TOP 10 StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems ORDER BY StockItemID'''
-data = pd.read_sql(query, cnxn)
-data.head()
+query = '''select name from sys.objects where type_desc='USER_TABLE' order by name'''
+df = pd.read_sql(query, cnxn)
+df
+
+for table in df['name']:
+    sql = f"select TOP 10  * from {table}"
+    display(Markdown(f"## {table}"))
+    display(pd.read_sql(sql, cnxn).head())
