@@ -34,3 +34,20 @@ for table in df['name']:
     sql = f"select TOP 10  * from {table}"
     display(Markdown(f"## {table}"))
     display(pd.read_sql(sql, cnxn).head())
+
+# ## SQL query
+#
+# In this case join patient table to clinical event table where the clinical event is Pneumonia and event date was later than 01/01/2005/ 
+#
+
+sql = "SELECT * FROM CodedEvent INNER JOIN Patient ON CodedEvent.Patient_ID=Patient.Patient_ID WHERE SnomedConceptId='233604007' AND ConsultationDate>'2005-01-01 00:00:00'"
+
+# #### Run the query
+
+cohort = pd.read_sql(sql, cnxn)
+
+# #### Display Results
+
+cohort.head()
+
+
