@@ -52,12 +52,10 @@ cohort.head()
 
 # ## Code lists
 
-import os
-
 filename = "QoFClusteres_CTV3Codes - Sheet1.csv"
-folder = "/data/"
+folder = "../data/"
 
-path = os.path.dirname(os.getcwd()) + folder + filename
+path = folder + filename
 
 path
 
@@ -76,8 +74,6 @@ sql = "SELECT * FROM CodedEvent INNER JOIN Patient ON CodedEvent.Patient_ID=Pati
 
 for index, row in cvd_code_df.iterrows():
     sql =  sql + f" OR CodedEvent.CTV3Code='{row['CTV3Code']}'"
-    
-sql
 # -
 
 cohort = pd.read_sql(sql, cnxn)
