@@ -1,0 +1,8 @@
+Code,Coding system,Description,Entity type,List name,QOF,analysis
+65E..,Read,Influenza vaccination,immunisation,Influenza immunisation,1,Main
+9OX8.,Read,Has influenza vaccination at work,immunisation,Influenza immunisation,0,Sensitivity
+n473.,Read,,immunisation,Influenza immunisation,1,Main
+n477.,Read,,immunisation,Influenza immunisation,1,Main
+n47d.,Read,,immunisation,Influenza immunisation,1,Main
+U60K4,Read,[X]Influenza vaccine causing adverse effects therapeutic use,immunisation,Influenza immunisation,0,Main
+ZV048,Read,[V]Influenza vaccination,immunisation,Influenza immunisation,0,Main
