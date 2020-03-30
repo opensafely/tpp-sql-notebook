@@ -4,6 +4,7 @@ FROM ebmdatalab/datalab-jupyter:python3.8.1-2328e31e7391a127fe7184dcce38d581a17b
 ENV MAIN_PATH=/home/app/notebook
 
 # Install pip requirements
+RUN apt-get install -y unixodbc-dev
 COPY requirements.txt /tmp/
 # Hack until this is fixed https://github.com/jazzband/pip-tools/issues/823
 RUN chmod 644 /tmp/requirements.txt
@@ -14,7 +15,6 @@ COPY install_mssql.sh /tmp/
 RUN bash /tmp/install_mssql.sh
 RUN pip install pyodbc
 
-
 EXPOSE 8888
 
 # This is a custom ipython kernel that allows us to manipulate
@@ -23,4 +23,4 @@ EXPOSE 8888
 COPY config/kernel.json /tmp/kernel_with_custom_path/kernel.json
 RUN jupyter kernelspec install /tmp/kernel_with_custom_path/ --user --name="python3"
 
-CMD cd ${MAIN_PATH} && PYTHONPATH=${MAIN_PATH} jupyter lab --config=config/jupyter_notebook_config.py
+CMD cd ${MAIN_PATH} && eval "$(echo $(cat .env))" PYTHONPATH=${MAIN_PATH} jupyter lab --config=config/jupyter_notebook_config.py
