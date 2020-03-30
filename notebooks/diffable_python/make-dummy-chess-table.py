@@ -88,8 +88,3 @@ chess['result'] = np.random.randint(0, len(results), len(chess))
 chess['result'] = chess['result'].apply(lambda i: results[i])
 chess.to_csv('dummy_chess.csv')
 chess.head()
-# -
-
-
-
-
