@@ -86,5 +86,19 @@ chess['swab_date'] = random_dates(start, end, len(chess),seed=321)
 chess['lab_test_date'] = random_dates(start, end, len(chess),seed=321)
 chess['result'] = np.random.randint(0, len(results), len(chess))
 chess['result'] = chess['result'].apply(lambda i: results[i])
-chess.to_csv('dummy_chess.csv')
+# -
+
 chess.head()
+
+# #### Make outcome data
+
+chess['admitted_itu'] = np.random.choice([0, 1], size=(len(chess)), p=[8./10, 2./10])
+chess['admission_date'] = pd.to_datetime(np.NaN)
+chess.loc[chess['admitted_itu']==1,'admission_date'] = chess.loc[chess['admitted_itu']==1,'swab_date'] + pd.DateOffset(days=10)
+chess['died'] = np.random.choice([0, 1], size=(len(chess)), p=[9./10, 1./10])
+chess['death_date'] = pd.to_datetime(np.NaN)
+chess.loc[chess['died']==1,'death_date'] = chess.loc[chess['died']==1,'swab_date'] + pd.DateOffset(days=20)
+
+chess.tail()
+
+chess.to_csv('../data/chess.csv')

@@ -62,7 +62,7 @@ codes_where = codes_to_sql_where("CTV3Code", smoking_qof['CTV3Code'])
 query = f'''
 SELECT * --DISTINCT Patient_ID
 FROM CodedEvent
-WHERE ({codes_where}) AND ConsultationDate BETWEEN '2019-09-01' AND '2020-03-31'
+WHERE ({codes_where}) AND ConsultationDate BETWEEN '2015-01-01' AND '2020-03-31'
 '''
 df = pd.read_sql(query, cnxn, index_col='Patient_ID')
 df.head()
