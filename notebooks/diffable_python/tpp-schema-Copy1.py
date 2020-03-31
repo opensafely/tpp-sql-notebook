@@ -50,34 +50,4 @@ cohort = pd.read_sql(sql, cnxn)
 
 cohort.head()
 
-# ## Code lists
-
-filename = "QoFClusteres_CTV3Codes - Sheet1.csv"
-folder = "../data/"
-
-path = folder + filename
-
-path
-
-df = pd.read_csv(path)
-
-df.head()
-
-cvd_code_df = df.set_index('ClusterId').filter(like='CVD', axis=0)
-
-cvd_code_df.reset_index(inplace=True)
-
-cvd_code_df.head()
-
-# +
-sql = "SELECT * FROM CodedEvent INNER JOIN Patient ON CodedEvent.Patient_ID=Patient.Patient_ID WHERE CodedEvent.CTV3Code='XaFsZ'"
-
-for index, row in cvd_code_df.iterrows():
-    sql =  sql + f" OR CodedEvent.CTV3Code='{row['CTV3Code']}'"
-# -
-
-cohort = pd.read_sql(sql, cnxn)
-
-cohort.head()
-
 
