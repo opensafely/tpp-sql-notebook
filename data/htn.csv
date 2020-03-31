@@ -1,0 +1,194 @@
+,ClusterId,ClusterName,CTV3Code,Description
+9668,DRHYP1,Hypertension diagnosis codes,G2...,Hypertensive disease
+9669,DRHYP1,Hypertension diagnosis codes,G200.,Malignant essential hypertension
+9670,DRHYP1,Hypertension diagnosis codes,G201.,Benign essential hypertension
+9671,DRHYP1,Hypertension diagnosis codes,G202.,Systolic hypertension
+9672,DRHYP1,Hypertension diagnosis codes,G24..,Secondary hypertension
+9673,DRHYP1,Hypertension diagnosis codes,G240.,Malignant secondary hypertension
+9674,DRHYP1,Hypertension diagnosis codes,G240z,Secondary malignant hypertension NOS
+9675,DRHYP1,Hypertension diagnosis codes,G241.,Secondary benign hypertension
+9676,DRHYP1,Hypertension diagnosis codes,G241z,Secondary benign hypertension NOS
+9677,DRHYP1,Hypertension diagnosis codes,G244.,Hypertension secondary to endocrine disorders
+9678,DRHYP1,Hypertension diagnosis codes,G24z.,Secondary hypertension NOS
+9679,DRHYP1,Hypertension diagnosis codes,G24z0,Secondary renovascular hypertension NOS
+9680,DRHYP1,Hypertension diagnosis codes,G24zz,Secondary hypertension NOS
+9681,DRHYP1,Hypertension diagnosis codes,G2y..,Other specified hypertensive disease
+9682,DRHYP1,Hypertension diagnosis codes,G2z..,Hypertensive disease NOS
+9683,DRHYP1,Hypertension diagnosis codes,Gyu2.,[X]Hypertensive diseases
+9684,DRHYP1,Hypertension diagnosis codes,Gyu20,[X]Other secondary hypertension
+9685,DRHYP1,Hypertension diagnosis codes,XE0Ub,Hypertension
+9686,DRHYP1,Hypertension diagnosis codes,XE0Uc,Essential hypertension
+9687,DRHYP1,Hypertension diagnosis codes,XE0Ud,Essential hypertension NOS
+9688,DRHYP1,Hypertension diagnosis codes,XSDSb,Diastolic hypertension
+9689,DRHYP1,Hypertension diagnosis codes,Xa0Cs,Labile hypertension
+9690,DRHYP1,Hypertension diagnosis codes,Xa3fQ,Malignant hypertension
+9691,DRHYP1,Hypertension diagnosis codes,XaZWm,Stage 1 hypertension (NICE - Nat Ins for Hth Clin Excl 2011)
+9692,DRHYP1,Hypertension diagnosis codes,XaZWn,Severe hypertension (Nat Inst for Health Clinical Ex 2011)
+9693,DRHYP1,Hypertension diagnosis codes,XaZbz,Stage 2 hypertension (NICE - Nat Ins for Hth Clin Excl 2011)
+9694,DRHYP2,Codes for hypertension resolved,21261,Hypertension resolved
+13816,FHYP,Familial Hypercholesterolemia diagnostic codes,XaR4i,Famil hypercholesterolaemia due to homozyg LDL recept mutatn
+13817,FHYP,Familial Hypercholesterolemia diagnostic codes,XaR4k,Fam def apo B-100 (AND/OR [Fam hyper due gen def apo B-100])
+13818,FHYP,Familial Hypercholesterolemia diagnostic codes,XaX3u,Possible familial hypercholesterolaemia
+13819,FHYP,Familial Hypercholesterolemia diagnostic codes,Xaa7X,Probable familial hypercholesterolaemia
+15586,HTMAX,Codes for maximal blood pressure (BP) therapy,XaJ5h,Patient on maximal tolerated antihypertensive therapy
+15587,HYP,Hypertension diagnosis codes,61462,Hypertension induced by oral contraceptive pill
+15588,HYP,Hypertension diagnosis codes,G2...,Hypertensive disease
+15589,HYP,Hypertension diagnosis codes,G20..,High blood pressure (& [essential hypertension])
+15590,HYP,Hypertension diagnosis codes,G200.,Malignant essential hypertension
+15591,HYP,Hypertension diagnosis codes,G201.,Benign essential hypertension
+15592,HYP,Hypertension diagnosis codes,G202.,Systolic hypertension
+15593,HYP,Hypertension diagnosis codes,G20z.,Hypertension NOS (& [essential])
+15594,HYP,Hypertension diagnosis codes,G24..,Secondary hypertension
+15595,HYP,Hypertension diagnosis codes,G240.,Malignant secondary hypertension
+15596,HYP,Hypertension diagnosis codes,G2400,Secondary malignant renovascular hypertension
+15597,HYP,Hypertension diagnosis codes,G240z,Secondary malignant hypertension NOS
+15598,HYP,Hypertension diagnosis codes,G241.,Secondary benign hypertension
+15599,HYP,Hypertension diagnosis codes,G2410,Secondary benign renovascular hypertension
+15600,HYP,Hypertension diagnosis codes,G241z,Secondary benign hypertension NOS
+15601,HYP,Hypertension diagnosis codes,G244.,Hypertension secondary to endocrine disorders
+15602,HYP,Hypertension diagnosis codes,G24z.,Secondary hypertension NOS
+15603,HYP,Hypertension diagnosis codes,G24z0,Secondary renovascular hypertension NOS
+15604,HYP,Hypertension diagnosis codes,G24z1,Hypertension secondary to drug
+15605,HYP,Hypertension diagnosis codes,G2y..,Other specified hypertensive disease
+15606,HYP,Hypertension diagnosis codes,G2z..,Hypertensive disease NOS
+15607,HYP,Hypertension diagnosis codes,Gyu2.,[X]Hypertensive diseases
+15608,HYP,Hypertension diagnosis codes,Gyu20,[X]Other secondary hypertension
+15609,HYP,Hypertension diagnosis codes,Gyu21,[X]Hypertension secondary to other renal disorders
+15610,HYP,Hypertension diagnosis codes,L120.,Benign essential hypertension in pregnancy/childbirth/puerp
+15611,HYP,Hypertension diagnosis codes,L1200,Benign essential hypertension in preg/childb/puerp unspec
+15612,HYP,Hypertension diagnosis codes,L1201,Benign essential hypertension in preg/childb/puerp - deliv
+15613,HYP,Hypertension diagnosis codes,L1202,Benign ess hypert in preg/childb/puerp - deliv with p/n comp
+15614,HYP,Hypertension diagnosis codes,L1203,Benign essential hypertension in preg/childb/puerp-not deliv
+15615,HYP,Hypertension diagnosis codes,L1204,Benign essential hypertension in preg/childb/puerp +p/n comp
+15616,HYP,Hypertension diagnosis codes,L120z,Benign essential hypertension in preg/childb/puerp NOS
+15617,HYP,Hypertension diagnosis codes,L121.,Renal hypertension in pregnancy/childbirth/puerperium
+15618,HYP,Hypertension diagnosis codes,L1210,Renal hypertension in pregnancy/childbirth/puerp unspecified
+15619,HYP,Hypertension diagnosis codes,L1211,Renal hypertension in pregnancy/childbirth/puerp - delivered
+15620,HYP,Hypertension diagnosis codes,L1212,Renal hypertension in preg/childb/puerp -deliv with p/n comp
+15621,HYP,Hypertension diagnosis codes,L1213,Renal hypertension in preg/childbirth/puerp - not delivered
+15622,HYP,Hypertension diagnosis codes,L1214,Renal hypertension in preg/childb/puerp + p/n complication
+15623,HYP,Hypertension diagnosis codes,L121z,Renal hypertension in pregnancy/childbirth/puerperium NOS
+15624,HYP,Hypertension diagnosis codes,L122.,Other pre-existing hypertension in preg/childbirth/puerp
+15625,HYP,Hypertension diagnosis codes,L1220,Other pre-existing hypertension in preg/childb/puerp unspec
+15626,HYP,Hypertension diagnosis codes,L1221,Other pre-existing hypertension in preg/childb/puerp - deliv
+15627,HYP,Hypertension diagnosis codes,L1222,Oth pre-exist hypert in preg/childb/puerp -del with p/n comp
+15628,HYP,Hypertension diagnosis codes,L1223,Other pre-exist hypertension in preg/childb/puerp-not deliv
+15629,HYP,Hypertension diagnosis codes,L1224,Other pre-exist hypertension in preg/childb/puerp + p/n comp
+15630,HYP,Hypertension diagnosis codes,L122z,Other pre-existing hypertension in preg/childb/puerp NOS
+15631,HYP,Hypertension diagnosis codes,L127.,Pre-eclampsia or eclampsia with pre-existing hypertension
+15632,HYP,Hypertension diagnosis codes,L1270,Pre-eclampsia or eclampsia with hypertension unspecified
+15633,HYP,Hypertension diagnosis codes,L1271,Pre-eclampsia or eclampsia with hypertension - delivered
+15634,HYP,Hypertension diagnosis codes,L1272,Pre-eclampsia or eclampsia with hypertension - del+p/n comp
+15635,HYP,Hypertension diagnosis codes,L1273,Pre-eclampsia or eclampsia with hypertension - not delivered
+15636,HYP,Hypertension diagnosis codes,L1274,Pre-eclampsia or eclampsia with hypertension + p/n comp
+15637,HYP,Hypertension diagnosis codes,L127z,Pre-eclampsia or eclampsia + pre-existing hypertension NOS
+15638,HYP,Hypertension diagnosis codes,L128.,Pre-exist hypertension compl preg childbirth and puerperium
+15639,HYP,Hypertension diagnosis codes,L1281,Pre-exist hyperten heart renal dis comp preg chldbirth/puerp
+15640,HYP,Hypertension diagnosis codes,L1282,Pre-exist 2ndry hypertens comp preg childbth and puerprum
+15641,HYP,Hypertension diagnosis codes,X40Bw,Superimposed pre-eclampsia
+15642,HYP,Hypertension diagnosis codes,XE0Ub,Hypertension
+15643,HYP,Hypertension diagnosis codes,XE0Uc,Essential hypertension
+15644,HYP,Hypertension diagnosis codes,XE0Ud,Essential hypertension NOS
+15645,HYP,Hypertension diagnosis codes,XE0W8,(Hypertensive disease) or (hypertension)
+15646,HYP,Hypertension diagnosis codes,XSDSb,Diastolic hypertension
+15647,HYP,Hypertension diagnosis codes,Xa0kX,Renovascular hypertension
+15648,HYP,Hypertension diagnosis codes,Xa0lt,Pre-existing hypertension complicating pregnancy
+15649,HYP,Hypertension diagnosis codes,Xa3fQ,Malignant hypertension
+15650,HYP,Hypertension diagnosis codes,XaZWm,Stage 1 hypertension (NICE - Nat Ins for Hth Clin Excl 2011)
+15651,HYP,Hypertension diagnosis codes,XaZWn,Severe hypertension (Nat Inst for Health Clinical Ex 2011)
+15652,HYP,Hypertension diagnosis codes,XaZbT,Hypertension resistant to drug therapy
+15653,HYP,Hypertension diagnosis codes,XaZbz,Stage 2 hypertension (NICE - Nat Ins for Hth Clin Excl 2011)
+15654,HYP,Hypertension diagnosis codes,XaZzo,Nocturnal hypertension
+15655,HYP,Hypertension diagnosis codes,Xab9L,Stage 1 hyperten (NICE 2011) without evidnce end organ damge
+15656,HYP,Hypertension diagnosis codes,Xab9M,Stage 1 hyperten (NICE 2011) with evidnce end organ damge
+15657,HYP2,Hypertension diagnosis codes,61462,Hypertension induced by oral contraceptive pill
+15658,HYP2,Hypertension diagnosis codes,G2...,Hypertensive disease
+15659,HYP2,Hypertension diagnosis codes,G20..,High blood pressure (& [essential hypertension])
+15660,HYP2,Hypertension diagnosis codes,G200.,Malignant essential hypertension
+15661,HYP2,Hypertension diagnosis codes,G201.,Benign essential hypertension
+15662,HYP2,Hypertension diagnosis codes,G202.,Systolic hypertension
+15663,HYP2,Hypertension diagnosis codes,G20z.,Hypertension NOS (& [essential])
+15664,HYP2,Hypertension diagnosis codes,G24..,Secondary hypertension
+15665,HYP2,Hypertension diagnosis codes,G240.,Malignant secondary hypertension
+15666,HYP2,Hypertension diagnosis codes,G2400,Secondary malignant renovascular hypertension
+15667,HYP2,Hypertension diagnosis codes,G240z,Secondary malignant hypertension NOS
+15668,HYP2,Hypertension diagnosis codes,G241.,Secondary benign hypertension
+15669,HYP2,Hypertension diagnosis codes,G2410,Secondary benign renovascular hypertension
+15670,HYP2,Hypertension diagnosis codes,G241z,Secondary benign hypertension NOS
+15671,HYP2,Hypertension diagnosis codes,G244.,Hypertension secondary to endocrine disorders
+15672,HYP2,Hypertension diagnosis codes,G24z.,Secondary hypertension NOS
+15673,HYP2,Hypertension diagnosis codes,G24z0,Secondary renovascular hypertension NOS
+15674,HYP2,Hypertension diagnosis codes,G24z1,Hypertension secondary to drug
+15675,HYP2,Hypertension diagnosis codes,G2y..,Other specified hypertensive disease
+15676,HYP2,Hypertension diagnosis codes,G2z..,Hypertensive disease NOS
+15677,HYP2,Hypertension diagnosis codes,Gyu2.,[X]Hypertensive diseases
+15678,HYP2,Hypertension diagnosis codes,Gyu20,[X]Other secondary hypertension
+15679,HYP2,Hypertension diagnosis codes,Gyu21,[X]Hypertension secondary to other renal disorders
+15680,HYP2,Hypertension diagnosis codes,L120.,Benign essential hypertension in pregnancy/childbirth/puerp
+15681,HYP2,Hypertension diagnosis codes,L1200,Benign essential hypertension in preg/childb/puerp unspec
+15682,HYP2,Hypertension diagnosis codes,L1201,Benign essential hypertension in preg/childb/puerp - deliv
+15683,HYP2,Hypertension diagnosis codes,L1202,Benign ess hypert in preg/childb/puerp - deliv with p/n comp
+15684,HYP2,Hypertension diagnosis codes,L1203,Benign essential hypertension in preg/childb/puerp-not deliv
+15685,HYP2,Hypertension diagnosis codes,L1204,Benign essential hypertension in preg/childb/puerp +p/n comp
+15686,HYP2,Hypertension diagnosis codes,L120z,Benign essential hypertension in preg/childb/puerp NOS
+15687,HYP2,Hypertension diagnosis codes,L121.,Renal hypertension in pregnancy/childbirth/puerperium
+15688,HYP2,Hypertension diagnosis codes,L1210,Renal hypertension in pregnancy/childbirth/puerp unspecified
+15689,HYP2,Hypertension diagnosis codes,L1211,Renal hypertension in pregnancy/childbirth/puerp - delivered
+15690,HYP2,Hypertension diagnosis codes,L1212,Renal hypertension in preg/childb/puerp -deliv with p/n comp
+15691,HYP2,Hypertension diagnosis codes,L1213,Renal hypertension in preg/childbirth/puerp - not delivered
+15692,HYP2,Hypertension diagnosis codes,L1214,Renal hypertension in preg/childb/puerp + p/n complication
+15693,HYP2,Hypertension diagnosis codes,L121z,Renal hypertension in pregnancy/childbirth/puerperium NOS
+15694,HYP2,Hypertension diagnosis codes,L122.,Other pre-existing hypertension in preg/childbirth/puerp
+15695,HYP2,Hypertension diagnosis codes,L1220,Other pre-existing hypertension in preg/childb/puerp unspec
+15696,HYP2,Hypertension diagnosis codes,L1221,Other pre-existing hypertension in preg/childb/puerp - deliv
+15697,HYP2,Hypertension diagnosis codes,L1222,Oth pre-exist hypert in preg/childb/puerp -del with p/n comp
+15698,HYP2,Hypertension diagnosis codes,L1223,Other pre-exist hypertension in preg/childb/puerp-not deliv
+15699,HYP2,Hypertension diagnosis codes,L1224,Other pre-exist hypertension in preg/childb/puerp + p/n comp
+15700,HYP2,Hypertension diagnosis codes,L122z,Other pre-existing hypertension in preg/childb/puerp NOS
+15701,HYP2,Hypertension diagnosis codes,L127.,Pre-eclampsia or eclampsia with pre-existing hypertension
+15702,HYP2,Hypertension diagnosis codes,L1270,Pre-eclampsia or eclampsia with hypertension unspecified
+15703,HYP2,Hypertension diagnosis codes,L1271,Pre-eclampsia or eclampsia with hypertension - delivered
+15704,HYP2,Hypertension diagnosis codes,L1272,Pre-eclampsia or eclampsia with hypertension - del+p/n comp
+15705,HYP2,Hypertension diagnosis codes,L1273,Pre-eclampsia or eclampsia with hypertension - not delivered
+15706,HYP2,Hypertension diagnosis codes,L1274,Pre-eclampsia or eclampsia with hypertension + p/n comp
+15707,HYP2,Hypertension diagnosis codes,L127z,Pre-eclampsia or eclampsia + pre-existing hypertension NOS
+15708,HYP2,Hypertension diagnosis codes,L128.,Pre-exist hypertension compl preg childbirth and puerperium
+15709,HYP2,Hypertension diagnosis codes,L1281,Pre-exist hyperten heart renal dis comp preg chldbirth/puerp
+15710,HYP2,Hypertension diagnosis codes,L1282,Pre-exist 2ndry hypertens comp preg childbth and puerprum
+15711,HYP2,Hypertension diagnosis codes,X40Bw,Superimposed pre-eclampsia
+15712,HYP2,Hypertension diagnosis codes,XE0Ub,Hypertension
+15713,HYP2,Hypertension diagnosis codes,XE0Uc,Essential hypertension
+15714,HYP2,Hypertension diagnosis codes,XE0Ud,Essential hypertension NOS
+15715,HYP2,Hypertension diagnosis codes,XE0W8,(Hypertensive disease) or (hypertension)
+15716,HYP2,Hypertension diagnosis codes,XSDSb,Diastolic hypertension
+15717,HYP2,Hypertension diagnosis codes,Xa0kX,Renovascular hypertension
+15718,HYP2,Hypertension diagnosis codes,Xa0lt,Pre-existing hypertension complicating pregnancy
+15719,HYP2,Hypertension diagnosis codes,Xa3fQ,Malignant hypertension
+15720,HYP2,Hypertension diagnosis codes,XaZWm,Stage 1 hypertension (NICE - Nat Ins for Hth Clin Excl 2011)
+15721,HYP2,Hypertension diagnosis codes,XaZWn,Severe hypertension (Nat Inst for Health Clinical Ex 2011)
+15722,HYP2,Hypertension diagnosis codes,XaZbT,Hypertension resistant to drug therapy
+15723,HYP2,Hypertension diagnosis codes,XaZbz,Stage 2 hypertension (NICE - Nat Ins for Hth Clin Excl 2011)
+15724,HYP2,Hypertension diagnosis codes,XaZzo,Nocturnal hypertension
+15725,HYP2,Hypertension diagnosis codes,Xab9L,Stage 1 hyperten (NICE 2011) without evidnce end organ damge
+15726,HYP2,Hypertension diagnosis codes,Xab9M,Stage 1 hyperten (NICE 2011) with evidnce end organ damge
+15727,HYPEXC,Hypertension exception reporting codes,XaJ4P,Exception reporting: hypertension quality indicators
+15728,HYPEXC,Hypertension exception reporting codes,XaJ4e,Excepted from hypertension qual indicators: Patient unsuit
+15729,HYPEXC,Hypertension exception reporting codes,XaJ4f,Excepted from hypertension qual indicators: Informed dissent
+15730,HYPINVITE,Invite for hypertension care review codes,9OI4.,Hypertension monitoring first letter
+15731,HYPINVITE,Invite for hypertension care review codes,9OI5.,Hypertension monitoring second letter
+15732,HYPINVITE,Invite for hypertension care review codes,9OI6.,Hypertension monitoring third letter
+15733,HYPINVITE,Invite for hypertension care review codes,9OI7.,Hypertension monitoring verbal invite
+15734,HYPINVITE,Invite for hypertension care review codes,9OI8.,Hypertension monitoring telephone invite
+15735,HYPINVITE,Invite for hypertension care review codes,XaCGj,Hypertension monitoring invitation
+15736,HYPINVITE,Invite for hypertension care review codes,Xafj3,Hypertension monitoring invitation short msg service txt msg
+15737,HYPINVITE,Invite for hypertension care review codes,Xafj4,Hypertension mnitoring short msg service text msg 1st invitn
+15738,HYPINVITE,Invite for hypertension care review codes,Xafj5,Hypertension mnitoring short msg service text msg 2nd invitn
+15739,HYPINVITE,Invite for hypertension care review codes,Xafj6,Hypertension mnitoring short msg service text msg 3rd invitn
+15740,HYPINVITE,Invite for hypertension care review codes,XagLb,Hypertension monitoring invitation email
+15741,HYPINVITE,Invite for hypertension care review codes,Y1f8f,Quality and Outcomes Framework quality indicator-related care invitation (procedure)
+15742,HYPINVITE,Invite for hypertension care review codes,Y1f9e,Quality and Outcomes Framework hypertension quality indicator-related care invitation (procedure)
+15743,HYPPCADEC,Codes indicating the patient has chosen not to receive hypertension quality indicator care,XaJ4f,Excepted from hypertension qual indicators: Informed dissent
+15744,HYPPCAPU,Codes for hypertension quality indicator care unsuitable for patient,XaJ4e,Excepted from hypertension qual indicators: Patient unsuit
+15745,HYPRES,Codes for hypertension resolved,21261,Hypertension resolved
+20140,INLIQS1HYPEXC,INLIQ - Stage 1 hypertension without evidence of end organ damage codes,Xab9L,Stage 1 hyperten (NICE 2011) without evidnce end organ damge
+28243,S1HYPEXC,Stage 1 hypertension without evidence of end organ damage codes,Xab9L,Stage 1 hyperten (NICE 2011) without evidnce end organ damge
