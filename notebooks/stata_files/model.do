@@ -1,20 +1,7 @@
-import delimited /Users/carolinemorton/Documents/ebmdatalab/covid19/tpp-sql-notebook/data/analysis/final_dataset.csv
+clear
+import delimited C:/Users/alexw/Documents/GitHub/tpp-sql-notebook/data/analysis/final_dataset.csv
 
-/* final data cleaning
-- gender 
-- v1 
-*/
-
-
-drop v1
-
-gen gender = 2 if sex == "F"
-replace gender = 1 if sex == "M"
-
-label define gender 2 "female" 1 "male"
-label values gender gender
-
-drop sex
+encode sex, gen(gender)
 
 gen ageband = .
 replace ageband = 1 if age <40
