@@ -19,7 +19,7 @@ import pandas as pd
 from IPython.display import display, Markdown
 
 server = 'covid.ebmdatalab.net,1433'
-database = 'OPENCoronaExport' 
+database = 'OPENCorona' 
 username = 'SA'
 password = 'ahsjdkaJAMSHDA123[' 
 cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
@@ -40,7 +40,7 @@ for table in df['name']:
 # In this case join patient table to clinical event table where the clinical event is Pneumonia and event date was later than 01/01/2005/ 
 #
 
-sql = "SELECT * FROM CodedEvent INNER JOIN Patient ON CodedEvent.Patient_ID=Patient.Patient_ID WHERE SnomedConceptId='233604007' AND ConsultationDate>'2005-01-01 00:00:00'"
+sql = "SELECT * FROM CodedEvent INNER JOIN Patient ON CodedEvent.Patient_ID=Patient.Patient_ID WHERE CTV3Code='Xa1kG' AND ConsultationDate>'2005-01-01 00:00:00'"
 
 # #### Run the query
 
@@ -79,5 +79,3 @@ for index, row in cvd_code_df.iterrows():
 cohort = pd.read_sql(sql, cnxn)
 
 cohort.head()
-
-
