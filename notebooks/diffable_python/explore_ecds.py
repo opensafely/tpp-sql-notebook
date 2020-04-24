@@ -25,6 +25,21 @@ password = 'ahsjdkaJAMSHDA123['
 cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 
+# ### Inspect columns
+
+# +
+# increase column display limit so that we can see all rows in summary data
+sql = '''-- main ecds table
+select TOP 1 *
+from ECDS
+'''
+
+ecds = pd.read_sql(sql, cnxn)
+pd.set_option('display.max_rows', 200)
+
+pd.Series(ecds.columns)
+# -
+
 # ### Main ECDS table
 
 # +
@@ -39,15 +54,6 @@ ecds = pd.read_sql(sql, cnxn)
 display(Markdown(f"**ECDS Summary**"))
 print("No of patients: ", ecds["Patient_ID"].nunique())
 print("Latest date: ", ecds["EC_Conclusion_Date_latest"].max())
-# -
-
-# ### Inspect columns
-
-# +
-# increase column display limit so that we can see all rows in summary data
-pd.set_option('display.max_rows', 200)
-
-ecds.max()
 # -
 
 # ### ECDS diagnosis
