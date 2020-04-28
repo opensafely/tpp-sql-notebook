@@ -197,58 +197,8 @@ def sgss_percentage(x=1):
 def icu_percentage(x=1):
     return round(100*x/icu_patient_count,0)
 
-
-# print summary information
-def summary_info(e2, ecds_patient_count, sgss_patient_count, icu_patient_count):    
-    display(Markdown(f"**ECDS Summary**"))
-    print("No of patients in ECDS: ", ecds_patient_count)
-    print("No of patients in ECDS who were admitted: ", e2["admit_flag"].sum())
-    print("Patients with covid diagnosis recorded:", e2["diagnosis_flag"].sum(), "(", ecds_percentage(e2["diagnosis_flag"].sum()), "% ) \n")
-    print("Latest date: ", e2["EC_Conclusion_Date_latest"].max(),  ", " , days_ago(e2["EC_Conclusion_Date_latest"].max()), "days ago \n")
-
-    display(Markdown(f"**ICNARC (ICU) Summary**"))
-    print("No of patients in ICNARC: ", icu_patient_count)
-    print("Latest date: ", e2["IcuAdmissionDateTime_latest"].max(),  ", " , days_ago(e2["IcuAdmissionDateTime_latest"].max()), "days ago \n")
-
-
-    display(Markdown(f"**SGSS Summary**"))
-    print("Total patients in SGSS: ", sgss_patient_count)
-    print("Latest date: ", e2["pos_Lab_Report_Date_latest"].max(),  ", " , days_ago(e2["pos_Lab_Report_Date_latest"].max()), "days ago \n")
-
-    print("Total positive results: ", e2["positives"].sum())
-    print("No of patients with at least one positive result: ", e2["positive_flag"].sum(), 
-          "(", sgss_percentage(e2["positive_flag"].sum()), "% )")
-
-    print("Total negative results: ", e2["negatives"].sum())
-    print("No of patients with at least one negative result: ", e2["negative_flag"].sum(), 
-          "(", sgss_percentage(e2["negative_flag"].sum()), "% )")
-
-    print("No of patients with at least one positive AND negative result: ", e2["pos_neg_flag"].sum(), 
-          "(", sgss_percentage(e2["pos_neg_flag"].sum()), "% )\n")
-
-
-
-    display(Markdown(f"**ECDS/SGSS/ICU Summary**"))
-
-    print("ECDS patients with positive lab results:", e2["ecds_and_positive_flag"].sum(),
-          "(", ecds_percentage(e2["ecds_and_positive_flag"].sum()), "% )")
-
-    print("ECDS patients with any covid diagnosis and positive lab result:", 
-          e2["diagnosis_and_positive_flag"].sum(), "(", ecds_percentage(e2["diagnosis_and_positive_flag"].sum()), "% )")
-
-    print("ECDS patients with no lab results:", e2["ecds_no_sgss_flag"].sum(),
-         "(", ecds_percentage(e2["ecds_no_sgss_flag"].sum()), "% )\n")
-
-    print("No of patients in SGSS not in A&E (ECDS): ", e2["sgss_no_ecds_flag"].sum(), 
-          "(", sgss_percentage(e2["sgss_no_ecds_flag"].sum()), "% )\n")
-
-    print("No of patients in ICU not in A&E (ECDS): ", e2["icu_no_ecds_flag"].sum(), 
-          "(", icu_percentage(e2["icu_no_ecds_flag"].sum()), "% )")
-
-    print("No of patients in ICU not in SGSS: ", e2["icu_no_sgss_flag"].sum(), 
-          "(", icu_percentage(e2["icu_no_sgss_flag"].sum()), "% )\n")
-
-summary_info(e2, ecds_patient_count, sgss_patient_count, icu_patient_count)
+results, ecds_patient_count, sgss_patient_count, icu_patient_count = merge_data(ecds, p, n, d, icu)
+results.drop("Patient_ID", axis=1).sum()
 # -
 
 # # Weekly date cut-offs
@@ -264,17 +214,7 @@ for i in range(4):
 
 l = pd.DataFrame(l, columns=["week_no", "date"])
 l
-# -
 
-for w in l["date"]: # note d doesn't contain dates
-    ecds1 = ecds.loc[ecds["EC_Conclusion_Date_latest"] <= w]
-    p1 = p.loc[p["pos_Lab_Report_Date_latest"] <= w]
-    n1 = n.loc[n["neg_Lab_Report_Date_latest"] <= w]
-    icu1 = icu.loc[icu["IcuAdmissionDateTime_latest"] <= w]
-    e2, ecds_patient_count, sgss_patient_count, icu_patient_count = merge_data(ecds1, p1, n1, d, icu1)
-    display(Markdown(f"# Cut-off date: {w:%Y-%m-%d}"))
-    summary_info(e2, ecds_patient_count, sgss_patient_count, icu_patient_count)
-    
 
 # +
    
