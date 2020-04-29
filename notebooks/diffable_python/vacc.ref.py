@@ -42,7 +42,7 @@ vacc.nunique()
 ## lets list the 48 different types of vaccine
 vacc.VaccinationContent.unique()
 
-# There are a few things here which aren't vaccines e.g. phytomenadione, palivizumab as well as Mikes content!
+# There are a few things here which aren't vaccines e.g. phytomenadione, palivizumab as well as Mikes content! Let us investigate a few individual items.
 
 mikes = vacc[vacc['VaccinationContent'].str.contains("mike", case=False)]
 mikes
@@ -50,8 +50,8 @@ mikes
 pneumovacc = vacc[vacc['VaccinationContent'].str.contains("PNEUMOCOCCAL", case=False)]
 pneumovacc
 
-pneumovacc = vacc[vacc['VaccinationContent'].str.contains("PNEUMOCOCCAL", case=False)]
-pneumovacc
+paliv= vacc[vacc['VaccinationContent'].str.contains("paliv", case=False)]
+paliv
 
 fluvacc = vacc[vacc['VaccinationContent'].str.contains("influ", case=False)]
 fluvacc
