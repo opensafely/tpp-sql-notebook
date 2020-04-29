@@ -36,11 +36,13 @@ cursor = cnxn.cursor()
 #
 # Our study population is everyone in CHESS (dummy) dataset that had a positive covid-19 swab
 
+# NBVAL_IGNORE_OUTPUT
 chess = pd.read_csv('../data/chess.csv')
 chess.head()
 
 study_population = chess[chess['result'] == 'COVID-19']
 
+# NBVAL_IGNORE_OUTPUT
 study_population.head()
 
 study_population.to_csv("../data/analysis/study_pop.csv")
@@ -53,6 +55,7 @@ study_population.to_csv("../data/analysis/study_pop.csv")
 
 # ##### Read codes
 
+# NBVAL_IGNORE_OUTPUT
 qof_clusters = pd.read_csv('../data/QoFClusteres_CTV3Codes - Sheet1.csv')
 chd_codes = qof_clusters.loc[qof_clusters['ClusterId']=='CHD','CTV3Code']
 chd_codes.head()
@@ -86,6 +89,7 @@ cvd_medcodes.head()
 # #### Find patients with coded events where code matches cvd disease
 
 # +
+# NBVAL_IGNORE_OUTPUT
 codes_where = codes_to_sql_where("CTV3Code", chd_codes)
 
 query = f'''
@@ -102,6 +106,7 @@ clin_df.head()
 # #### Find all patients where cvd code on record
 
 # +
+# NBVAL_IGNORE_OUTPUT
 codes_where = codes_to_sql_where("DMD_ID", cvd_medcodes['id'])
 
 query = f'''
@@ -125,8 +130,10 @@ med_df = pd.read_sql(query, cnxn, index_col='Patient_ID')
 med_df.head()
 # -
 
+# NBVAL_IGNORE_OUTPUT
 clin_df.join(med_df, how='outer').fillna(0).head()
 
+# NBVAL_IGNORE_OUTPUT
 clin_df.to_csv("../data/analysis/cvd_dis.csv")
 
 # #### Outcome: Death
@@ -146,6 +153,7 @@ clin_df.to_csv("../data/analysis/cvd_dis.csv")
 
 df = pd.read_csv('../data/analysis/study_pop.csv')
 
+# NBVAL_IGNORE_OUTPUT
 df.head()
 
 # #### Demographics 
@@ -158,31 +166,37 @@ WHERE {codes_where}
 ORDER BY Patient_ID
 '''
 
+# NBVAL_IGNORE_OUTPUT
 co_df = pd.read_sql(query, cnxn, index_col='Patient_ID')
 co_df.head()
 
+# NBVAL_IGNORE_OUTPUT
 import datetime 
 now = datetime.date.today()
 now
 
 co_df['Age'] = (now - co_df['DateOfBirth']).astype('<m8[Y]')
 
+# NBVAL_IGNORE_OUTPUT
 co_df.head()
 
 co_df.reset_index(inplace=True)
 
 co_df = co_df[['Patient_ID', 'Sex', 'Age']]
 
+# NBVAL_IGNORE_OUTPUT
 co_df.to_csv('../data/analysis/demo.csv')
 
 # #### Smoking status
 
 smoking_stat = pd.read_csv('../data/smoking_codes.csv')
 
+# NBVAL_IGNORE_OUTPUT
 smoking_stat.head()
 
 codes_where = codes_to_sql_where("CTV3Code", smoking_stat['CTV3Code'])
 
+# NBVAL_IGNORE_OUTPUT
 query = f'''
 SELECT * --DISTINCT Patient_ID
 FROM CodedEvent
@@ -197,6 +211,7 @@ smok_df['smoking_status'] = 1
 
 smok_df = smok_df[['Patient_ID', 'smoking_status']]
 
+# NBVAL_IGNORE_OUTPUT
 smok_df.head()
 
 smok_df.to_csv('../data/analysis/smok.csv')
@@ -207,18 +222,21 @@ study_pop = pd.read_csv('../data/analysis/study_pop.csv')
 
 study_pop = study_pop[['Patient_ID', 'admitted_itu', 'died']]
 
+# NBVAL_IGNORE_OUTPUT
 study_pop.head()
 
 # ##### Add in exposure
 
 cvd = pd.read_csv('../data/analysis/cvd_dis.csv')
 
+# NBVAL_IGNORE_OUTPUT
 cvd.head()
 
 study_pop = study_pop.merge(cvd, how='left', on='Patient_ID')
 
 study_pop.fillna(0, inplace=True)
 
+# NBVAL_IGNORE_OUTPUT
 study_pop.head()
 
 # ##### Add in demographics and other covariates
@@ -227,10 +245,12 @@ demo = pd.read_csv('../data/analysis/demo.csv')
 
 demo = demo[['Patient_ID', 'Sex', 'Age']]
 
+# NBVAL_IGNORE_OUTPUT
 demo.head()
 
 study_pop = study_pop.merge(demo, how='left', on='Patient_ID')
 
+# NBVAL_IGNORE_OUTPUT
 study_pop.head()
 
 # ##### Add in smoking
@@ -239,11 +259,13 @@ smok = pd.read_csv('../data/analysis/smok.csv')
 
 smok = smok[['Patient_ID', 'smoking_status']]
 
+# NBVAL_IGNORE_OUTPUT
 smok.head()
 
 study_pop = study_pop.merge(smok, how='left', on='Patient_ID')
 study_pop.fillna(0, inplace=True)
 
+# NBVAL_IGNORE_OUTPUT
 study_pop.head()
 
 study_pop.to_csv('../data/analysis/final_dataset.csv')

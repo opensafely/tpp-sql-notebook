@@ -27,6 +27,7 @@ importlib.reload(database)  # for quick library development
 from IPython.display import display, Markdown
 
 # +
-database.patients_with_age_condition(">=", 70)
+# NBVAL_IGNORE_OUTPUT
 
+database.patients_with_age_condition(">=", 70)
 

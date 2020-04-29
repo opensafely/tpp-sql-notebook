@@ -25,11 +25,16 @@ password = 'ahsjdkaJAMSHDA123['
 cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 
+# NBVAL_IGNORE_OUTPUT
 pd.read_sql("select top 10 * from CPNS", cnxn).iloc[0]
 
+# NBVAL_IGNORE_OUTPUT
 pd.read_sql("select top 10 * from SGSS_Negative", cnxn).iloc[0]
 
+# NBVAL_IGNORE_OUTPUT
 pd.read_sql("select top 10 * from SGSS_Positive", cnxn).iloc[0]
 
+# +
+# NBVAL_IGNORE_OUTPUT
 pd.read_sql("select top 10 * from ONS_Deaths", cnxn).iloc[0]
 
