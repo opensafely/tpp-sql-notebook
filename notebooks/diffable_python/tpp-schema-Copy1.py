@@ -50,7 +50,9 @@ cohort = pd.read_sql(sql, cnxn)
 
 # #### Display Results
 
+# +
 # NBVAL_IGNORE_OUTPUT
-cohort.head()
+#cohort.head()
+# -
 
 
