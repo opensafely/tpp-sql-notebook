@@ -42,17 +42,23 @@ for table in df['name']:
 # In this case join patient table to clinical event table where the clinical event is Pneumonia and event date was later than 01/01/2005/ 
 #
 
-sql = "SELECT * FROM CodedEvent INNER JOIN Patient ON CodedEvent.Patient_ID=Patient.Patient_ID WHERE SnomedConceptId='233604007' AND ConsultationDate>'2005-01-01 00:00:00'"
+sql = '''SELECT * FROM CodedEvent 
+INNER JOIN Patient ON CodedEvent.Patient_ID=Patient.Patient_ID 
+WHERE SnomedConceptId='233604007' AND ConsultationDate>'2005-01-01 00:00:00'
+'''
 
 # #### Run the query
 
-cohort = pd.read_sql(sql, cnxn)
+# +
+#cohort = pd.read_sql(sql, cnxn)
+# snomed concept id column no longer in table
+# -
 
 # #### Display Results
 
 # +
 # NBVAL_IGNORE_OUTPUT
 #cohort.head()
-# -
+# +
 
 
