@@ -47,6 +47,12 @@ vacc.VaccinationContent.unique()
 mikes = vacc[vacc['VaccinationContent'].str.contains("mike", case=False)]
 mikes
 
+pneumovacc = vacc[vacc['VaccinationContent'].str.contains("PNEUMOCOCCAL", case=False)]
+pneumovacc
+
+pneumovacc = vacc[vacc['VaccinationContent'].str.contains("PNEUMOCOCCAL", case=False)]
+pneumovacc
+
 fluvacc = vacc[vacc['VaccinationContent'].str.contains("influ", case=False)]
 fluvacc
 
