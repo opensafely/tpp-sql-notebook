@@ -25,11 +25,13 @@ password = 'ahsjdkaJAMSHDA123['
 cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 
+# NBVAL_IGNORE_OUTPUT
 # select command
 query = '''select name from sys.objects where type_desc='USER_TABLE' order by name'''
 df = pd.read_sql(query, cnxn)
 df
 
+# NBVAL_IGNORE_OUTPUT
 for table in df['name']:
     sql = f"select TOP 10  * from {table}"
     display(Markdown(f"## {table}"))
@@ -48,6 +50,7 @@ cohort = pd.read_sql(sql, cnxn)
 
 # #### Display Results
 
+# NBVAL_IGNORE_OUTPUT
 cohort.head()
 
 

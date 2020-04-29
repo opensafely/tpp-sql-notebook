@@ -60,4 +60,6 @@ df3 = database.patients_with_codes_in_consecutive_quarters(
     medicine_code_list=list(drug_codes), 
     quarters=3)
 
-df3
+# +
+# NBVAL_IGNORE_OUTPUT
+#df3

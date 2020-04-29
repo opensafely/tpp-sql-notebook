@@ -59,6 +59,7 @@ from lib.data_gathering import codes_to_sql_where
 
 codes_where = codes_to_sql_where("CTV3Code", smoking_qof['CTV3Code'])
 
+# NBVAL_IGNORE_OUTPUT
 query = f'''
 SELECT * --DISTINCT Patient_ID
 FROM CodedEvent

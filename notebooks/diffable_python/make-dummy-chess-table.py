@@ -32,6 +32,7 @@ password = 'ahsjdkaJAMSHDA123['
 cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 
+# NBVAL_IGNORE_OUTPUT
 # select command
 query = '''select name from sys.objects where type_desc='USER_TABLE' order by name'''
 df = pd.read_sql(query, cnxn)
@@ -39,6 +40,7 @@ df
 
 # ## Get random sample of patient ids from TPP data
 
+# NBVAL_IGNORE_OUTPUT
 sql = f"select * from Patient"
 patient = pd.read_sql(sql, cnxn).set_index('Patient_ID')
 rand_samp = patient.sample(n=1000,random_state=1234).index
@@ -88,6 +90,7 @@ chess['result'] = np.random.randint(0, len(results), len(chess))
 chess['result'] = chess['result'].apply(lambda i: results[i])
 # -
 
+# NBVAL_IGNORE_OUTPUT
 chess.head()
 
 # #### Make outcome data
@@ -99,6 +102,7 @@ chess['died'] = np.random.choice([0, 1], size=(len(chess)), p=[9./10, 1./10])
 chess['death_date'] = pd.to_datetime(np.NaN)
 chess.loc[chess['died']==1,'death_date'] = chess.loc[chess['died']==1,'swab_date'] + pd.DateOffset(days=20)
 
+# NBVAL_IGNORE_OUTPUT
 chess.tail()
 
 chess.to_csv('../data/chess.csv')

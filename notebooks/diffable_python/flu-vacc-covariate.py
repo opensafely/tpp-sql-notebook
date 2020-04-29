@@ -68,6 +68,7 @@ codes_to_sql_where("CTV3Code", flu_read_codes['Code'].head())
 # ### Medcode based vaccinations
 # - there are no values for the current flu season in the dummy data, but it works for previous time periods
 
+# NBVAL_IGNORE_OUTPUT
 codes_where = codes_to_sql_where("CTV3Code", flu_read_codes['Code'])
 query = f'''
 SELECT * --DISTINCT Patient_ID
