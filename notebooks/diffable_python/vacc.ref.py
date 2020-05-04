@@ -18,6 +18,7 @@
 
 import pyodbc
 import pandas as pd
+import os
 from IPython.display import display, Markdown
 
 server = 'covid.ebmdatalab.net,1433'
@@ -48,12 +49,14 @@ mikes = vacc[vacc['VaccinationContent'].str.contains("mike", case=False)]
 mikes
 
 pneumovacc = vacc[vacc['VaccinationContent'].str.contains("PNEUMOCOCCAL", case=False)]
+pneumovacc.to_csv(os.path.join('..','data','pneumovacc_reftable.csv')) 
 pneumovacc
 
 paliv= vacc[vacc['VaccinationContent'].str.contains("paliv", case=False)]
 paliv
 
 fluvacc = vacc[vacc['VaccinationContent'].str.contains("influ", case=False)]
+fluvacc.to_csv(os.path.join('..','data','fluvacc_reftable.csv')) 
 fluvacc
 
 cnxn.close()
