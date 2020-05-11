@@ -33,6 +33,7 @@ cursor = cnxn.cursor()
 # - just those in the CHD cluster, to identify cardiac events
 # - in order to differentiate between patients on primary and secondary prevention
 
+# NBVAL_IGNORE_OUTPUT
 qof_clusters = pd.read_csv('../data/QoFClusteres_CTV3Codes - Sheet1.csv')
 chd_codes = qof_clusters.loc[qof_clusters['ClusterId']=='CHD','CTV3Code']
 chd_codes.head()
@@ -41,6 +42,7 @@ chd_codes.head()
 # - taken from https://github.com/ebmdatalab/cvd-covid-codelist-notebook/blob/master/notebooks/cvd.codelist.ipynb
 
 # +
+# NBVAL_IGNORE_OUTPUT
 sql = '''
 WITH bnf_codes AS (
   SELECT bnf_code FROM hscic.presentation WHERE 
@@ -78,8 +80,10 @@ def codes_to_sql_where(col_name, code_list):
     return where
 
 
+# NBVAL_IGNORE_OUTPUT
 codes_to_sql_where("CTV3Code", chd_codes.head())
 
+# NBVAL_IGNORE_OUTPUT
 codes_where = codes_to_sql_where("CTV3Code", chd_codes)
 query = f'''
 SELECT DISTINCT Patient_ID, 1 AS chd_code
@@ -89,6 +93,9 @@ ORDER BY Patient_ID
 '''
 clin_df = pd.read_sql(query, cnxn, index_col='Patient_ID')
 clin_df
+
+# +
+# NBVAL_IGNORE_OUTPUT
 
 codes_where = codes_to_sql_where("DMD_ID", cvd_medcodes['id'])
 query = f'''
@@ -109,7 +116,9 @@ ORDER BY med.Patient_ID
 '''
 med_df = pd.read_sql(query, cnxn, index_col='Patient_ID')
 med_df.head()
+# -
 
+# NBVAL_IGNORE_OUTPUT
 clin_df.join(med_df, how='outer').fillna(0).head()
 
 # ### Connection should be closed before restarting the kernal or closing the notebook

@@ -25,11 +25,13 @@ password = 'ahsjdkaJAMSHDA123['
 cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 
+# NBVAL_IGNORE_OUTPUT
 # select command
 query = '''select name from sys.objects where type_desc='USER_TABLE' order by name'''
 df = pd.read_sql(query, cnxn)
 df
 
+# NBVAL_IGNORE_OUTPUT
 for table in df['name']:
     sql = f"select TOP 10  * from {table}"
     display(Markdown(f"## {table}"))
@@ -40,14 +42,23 @@ for table in df['name']:
 # In this case join patient table to clinical event table where the clinical event is Pneumonia and event date was later than 01/01/2005/ 
 #
 
-sql = "SELECT * FROM CodedEvent INNER JOIN Patient ON CodedEvent.Patient_ID=Patient.Patient_ID WHERE SnomedConceptId='233604007' AND ConsultationDate>'2005-01-01 00:00:00'"
+sql = '''SELECT * FROM CodedEvent 
+INNER JOIN Patient ON CodedEvent.Patient_ID=Patient.Patient_ID 
+WHERE SnomedConceptId='233604007' AND ConsultationDate>'2005-01-01 00:00:00'
+'''
 
 # #### Run the query
 
-cohort = pd.read_sql(sql, cnxn)
+# +
+#cohort = pd.read_sql(sql, cnxn)
+# snomed concept id column no longer in table
+# -
 
 # #### Display Results
 
-cohort.head()
+# +
+# NBVAL_IGNORE_OUTPUT
+#cohort.head()
+# +
 
 

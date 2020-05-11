@@ -74,6 +74,7 @@ codes_to_sql_where("DMD_ID", nsaid_codelist['id'].tail())
 
 # ### Count NSAID prescribing events within specified time periods
 
+# NBVAL_IGNORE_OUTPUT
 codes_where = codes_to_sql_where("DMD_ID", nsaid_codelist['id'])
 query = f'''
 SELECT 
