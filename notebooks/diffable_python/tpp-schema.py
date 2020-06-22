@@ -14,6 +14,21 @@
 #     name: python3
 # ---
 
+# # TPP Schema
+#
+# This notebook describes the schema of the TPP database, based on the dummy data supplied by TPP.
+# Note that although the schema accurately reflects what's in production, the dummy data itself
+# should not be considered in any sense representative.
+#
+# TPP upload new dumps of dummy data via SFTP to `covid.ebmdatalab.net`. To load a new data dump:
+# ```
+# ssh covid.ebmdatalab.net
+# sudo -s
+# # cd /home/sftpuser
+# python 3.8 restore.py OPENCorona_Test_Data_20200605.bak
+# ```
+# (Obviously using the filename of the latest backup instead.)
+
 import pyodbc
 import pandas as pd
 from IPython.display import display, Markdown
@@ -24,6 +39,8 @@ username = 'SA'
 password = 'ahsjdkaJAMSHDA123[' 
 cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
+
+pd.set_option('display.max_columns', None)
 
 # select command
 query = '''select name from sys.objects where type_desc='USER_TABLE' order by name'''
