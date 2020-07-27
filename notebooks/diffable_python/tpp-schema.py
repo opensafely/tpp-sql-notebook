@@ -25,9 +25,13 @@
 # ssh covid.ebmdatalab.net
 # sudo -s
 # # cd /home/sftpuser
-# python 3.8 restore.py OPENCorona_Test_Data_20200605.bak
+# python3.8 restore.py OPENCorona_Test_Data_20200605.bak
 # ```
 # (Obviously using the filename of the latest backup instead.)
+
+# ## Data from 2020-07-17
+#
+# Using file `OPENCorona_Test_Data_20200717.bak`
 
 import pyodbc
 import pandas as pd
