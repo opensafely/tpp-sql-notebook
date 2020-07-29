@@ -56,5 +56,6 @@ for table in df['name']:
     display(Markdown(f"## {table}"))
     display(pd.read_sql(sql, cnxn).head())
 
+pd.set_option('display.max_rows', None)
 display(Markdown(f"## DataDictionary (full table)"))
-display(pd.read_sql("select  * from DataDictionary", cnxn)
+pd.read_sql("select  * from DataDictionary", cnxn)
