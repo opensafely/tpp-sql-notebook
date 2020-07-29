@@ -55,3 +55,7 @@ for table in df['name']:
     sql = f"select TOP 10  * from {table}"
     display(Markdown(f"## {table}"))
     display(pd.read_sql(sql, cnxn).head())
+
+pd.set_option('display.max_rows', None)
+display(Markdown(f"## DataDictionary (full table)"))
+pd.read_sql("select  * from DataDictionary", cnxn)
