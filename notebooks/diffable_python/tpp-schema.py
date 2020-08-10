@@ -29,9 +29,9 @@
 # ```
 # (Obviously using the filename of the latest backup instead.)
 
-# ## Data from 2020-08-05
+# ## Data from 2020-08-10
 #
-# Using file `OPENCorona_Test_Data_20200805.bak`
+# Using file `OPENCorona_Test_Data_20200810.bak`
 
 import pyodbc
 import pandas as pd
