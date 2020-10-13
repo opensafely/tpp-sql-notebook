@@ -26,12 +26,13 @@
 # sudo -s
 # # cd /home/sftpuser
 # python3.8 restore.py OPENCorona_Test_Data_20200605.bak
+# docker restart sql1
 # ```
 # (Obviously using the filename of the latest backup instead.)
 
-# ## Data from 2020-08-10
+# ## Data from 2020-10-13
 #
-# Using file `OPENCorona_Test_Data_20200810.bak`
+# Using file `OPENCorona_Test_Data_20201013.bak`
 
 import pyodbc
 import pandas as pd
