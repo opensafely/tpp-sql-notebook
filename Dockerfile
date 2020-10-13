@@ -4,7 +4,7 @@ FROM ebmdatalab/datalab-jupyter:python3.8.1-2328e31e7391a127fe7184dcce38d581a17b
 ENV MAIN_PATH=/home/app/notebook
 
 # Install pip requirements
-RUN apt-get install -y unixodbc-dev
+RUN apt-get update && apt-get install -y unixodbc-dev
 COPY requirements.txt /tmp/
 # Hack until this is fixed https://github.com/jazzband/pip-tools/issues/823
 RUN chmod 644 /tmp/requirements.txt
