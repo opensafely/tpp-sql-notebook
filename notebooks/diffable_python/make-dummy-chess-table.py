@@ -28,7 +28,7 @@ from IPython.display import display, Markdown
 server = 'covid.ebmdatalab.net,1433'
 database = 'OPENCoronaExport' 
 username = 'SA'
-password = 'ahsjdkaJAMSHDA123[' 
+password = 'my_secret_password' 
 cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 
