@@ -1,20 +1,14 @@
-name: Notebook checks
+name: Test that the project is runnable
 
-on:
-  push:
-    paths-ignore:
-    - "run.py"
-
+on: [push, workflow_dispatch]
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  DOCKER_RO_TOKEN: ${{ secrets.DOCKER_RO_TOKEN }}
+  STATA_LICENSE: ${{ secrets.STATA_LICENSE }}
 jobs:
-  test_job:
-    # If you change this job, please also change it in
-    # build_runner.yaml (and see comments there for explanation)
+  test:
     runs-on: ubuntu-latest
-    name: Test notebooks are runnable and up-to-date
+    name: Test the project can run, using dummy data
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-    - name: Test
-      uses: ./.github/actions/build
-      with:
-        args: ./run_tests.sh
+    - name: Test that the project is runnable
+      uses: opensafely-core/research-action@v1
